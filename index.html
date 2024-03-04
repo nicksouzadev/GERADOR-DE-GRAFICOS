@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/fav-icon.png">
+    <link rel="stylesheet" href="./css/global.css">
+    <title>Gerador de Gráficos</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="chart-container">
+            <div id="canvas-container"></div>
+        </div>
+
+        <div class="controls">
+            <select id="chartType" class="select">
+                <option value="bar">Barra</option>
+                <option value="line">Linha</option>
+                <option value="pie">Pizza</option>
+                <option value="doughnut">Rosca</option>
+                <option value="radar">Radar</option>
+            </select>
+            <input type="text" id="labelInput" class="input" placeholder="Rótulo">
+            <input type="number" id="dataInput" class="input" placeholder="Dados">
+            <button onclick="addData()" class="btn">Adicionar Dados</button>
+            <button onclick="updateChartType()" class="btn">Alterar tipo de gráfico</button>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
